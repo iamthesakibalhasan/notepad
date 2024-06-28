@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <img class="image" src="my-logo.png" alt="">
+    <div class="container">
+        <div class="book">
+            <div class="cover">
+                <h1>My Notebook</h1>
+            </div>
+            <div class="content">
+                <div class="note-form">
+                    <div class="style">
+                        <button onclick="formatText('bold')"><i class="fa-solid fa-bold"></i></button>
+                        <button onclick="formatText('italic')"><i class="fa-solid fa-italic"></i></button>
+                        <button onclick="formatText('underline')"><i class="fa-solid fa-underline"></i></button>
+                        <button onclick="formatText('insertUnorderedList')"><i class="fa-solid fa-list"></i></button>
+                        <button onclick="formatText('insertOrderedList')"><i class="fa-solid fa-list-ol"></i></button>
+                    </div>
+                    <div id="note" contenteditable="true" placeholder="Write your note here..."></div>
+                    <div class="button-group">
+                        <button id="save-button"><i class="fa-light fa-floppy-disk"></i></button>
+                        <button id="edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button id="delete-button"><i class="fa-solid fa-trash" style="color: #d11a2a;"></i></button>
+                    </div>
+                </div>
+                <h2>Saved Notes</h2>
+                <div id="notes"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for opening notes -->
+    <div id="note-modal" class="modal">
+        <div class="modal-content">
+            <span class="close"><i class="fa-solid fa-circle-xmark"></i></span>
+            <p id="modal-note-content"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
